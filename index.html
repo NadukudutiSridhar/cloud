@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #calculator {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .calculator-screen {
+            width: 100%;
+            padding: 10px;
+            font-size: 2em;
+            text-align: right;
+            border: none;
+            outline: none;
+        }
+
+        .calculator-keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        .calculator-keys button {
+            border: none;
+            font-size: 1.5em;
+            padding: 15px;
+            cursor: pointer;
+            outline: none;
+            background-color: #f4f4f4;
+        }
+
+        .operator {
+            background-color: #ff8c00;
+            color: #fff;
+        }
+
+        .equal-sign {
+            background-color: #4caf50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" class="calculator-screen" id="display" disabled />
+        <div class="calculator-keys">
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button class="operator" value="/">/</button>
+
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button class="operator" value="*">*</button>
+
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button class="operator" value="-">-</button>
+
+            <button value="0">0</button>
+            <button value=".">.</button>
+            <button class="equal-sign" id="calculate" value="=">=</button>
+            <button class="operator" value="+">+</button>
+        </div>
+    </div>
+</body>
+</html>
